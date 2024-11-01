@@ -6,3 +6,5 @@ the Laravel 11 API app is in the backend folder
 the Vue 3 Web app is in the fronten folder
   npm install
   npm run dev
+
+  notes: make sure that the API port is 8000, e.g. http://127.0.0.1:8000
