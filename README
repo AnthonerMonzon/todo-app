@@ -1,1 +1,8 @@
-the database is sqlite.
+the database is sqlite
+the Laravel 11 API app is in the backend folder
+  to migrate run on vscode terminal: php artisan serve
+  to run backend run on vscode terminal: php artisan serve
+
+the Vue 3 Web app is in the fronten folder
+  npm install
+  npm run dev
