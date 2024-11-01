@@ -62,7 +62,7 @@ export default {
                 .then(res => {
                     console.log(res);
                     alert(res.data.message);
-                    this.$router.push('/to-do');
+                    this.$router.push('/');
                 })
                 .catch(function (error) {
                     if (error.response) {
@@ -100,7 +100,7 @@ export default {
                     if (error.response) {
                         if (error.response.status = 404) {
                             alert('No ToDo ID found');
-                            mythis.$router.push('/to-do');
+                            mythis.$router.push('/');
                         }
                         // console.log(error.response.data);
                         // console.log(error.response.status);
@@ -119,7 +119,7 @@ export default {
                 });
         },
         backToList(){
-            this.$router.push('/to-do') ;
+            this.$router.push('/') ;
         }
     }
 }

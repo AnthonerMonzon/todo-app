@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container-fluid">
 					<RouterLink class="navbar-brand" to="/">To-Do Application</RouterLink>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@ import { RouterLink, RouterView } from 'vue-router'
 								<RouterLink class="nav-link" to="/to-do">To-Do</RouterLink>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</nav>
 		</div>

@@ -61,7 +61,7 @@ export default {
                         description: '',
                         status: '',
                     }
-                    this.$router.push('/to-do') ;
+                    this.$router.push('/') ;
                 })
                 .catch(function (error) {
                     if (error.response) {
@@ -87,7 +87,7 @@ export default {
 
         },
         backToList(){
-            this.$router.push('/to-do') ;
+            this.$router.push('/') ;
         }
     }
 }

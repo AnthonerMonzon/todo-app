@@ -10,7 +10,7 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'home',
-			component: HomeView
+			component: ToDoView
 		},
 		{
 			path: '/about',
@@ -20,11 +20,11 @@ const router = createRouter({
 			// which is lazy-loaded when the route is visited.
 			component: () => import('../views/AboutView.vue')
 		},
-		{
-			path: '/to-do',
-			name: 'toDo',
-			component: ToDoView
-		},
+		// {
+		// 	path: '/to-do',
+		// 	name: 'toDo',
+		// 	component: ToDoView
+		// },
 		{
 			path: '/to-do/create',
 			name: 'toDoCreate',
