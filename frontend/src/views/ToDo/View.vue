@@ -31,7 +31,7 @@
                         </tr>
                     </thead>
                     <tbody v-if="this.toDos.length > 0">
-                        <tr v-for="(toDo, index) in this.toDos" :key="index" >
+                        <tr v-for="(toDo, index) in this.toDos" :key="index">
                             <td>{{ toDo.id }}</td>
                             <td>{{ toDo.title }}</td>
                             <td>{{ toDo.description }}</td>
@@ -39,7 +39,7 @@
                                 <span class="badge text-bg-warning" v-if="toDo.status == 'Pending'">Pending</span>
                                 <span class="badge text-bg-info" v-else-if="toDo.status == 'Completed'">Completed</span>
                             </td>
-                            <td>{{ toDo.created_at }}</td>
+                            <td>{{ format_date(toDo.created_at) }}</td>
                             <td>
                                 <RouterLink :to="{ path: '/to-do/' + toDo.id + '/edit' }" class="btn btn-success mx-2">
                                     Edit
@@ -77,6 +77,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment'
 
 export default {
     name: 'todo',
@@ -172,13 +173,18 @@ export default {
                     });
             }
         },
-        filterToDo(){
+        filterToDo() {
             var queryStr = this.filterStatus == "All" ? "" : "?status=" + this.filterStatus;
-            
+
             axios.get(`http://localhost:8000/api/to_dos${queryStr}`).then(res => {
                 this.toDos = res.data.toDo;
                 console.log(this.toDos);
             });
+        },
+        format_date(value) {
+            if (value) {
+                return moment(String(value)).format('MMM DD, YYYY')
+            }
         }
     },
 }
