@@ -1,0 +1,2 @@
+to migrate run on vscode terminal: php artisan serve
+to run backend run on vscode terminal: php artisan serve
